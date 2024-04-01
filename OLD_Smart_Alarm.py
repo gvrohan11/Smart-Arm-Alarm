@@ -9,9 +9,9 @@ in1 = 23
 in2 = 24
 ena = 25
 
-in3 = 5
-in4 = 6
-enb = 13
+in3 = 9
+in4 = 11
+enb = 10
 
 # GPIO setup 
 
