@@ -106,15 +106,15 @@ def wake_up():
             break
 
 # Test Code for arm:
-#wake_up()
+wake_up()
 
 # Actual Arm setting (Press Ctrl + C + C to De-Activate):
 
-schedule.every().day.at("07:00").do(wake_up)
+# schedule.every().day.at("07:00").do(wake_up)
 
-while True:
-    schedule.run_pending()
-    time.sleep(1)
+# while True:
+    # schedule.run_pending()
+    # time.sleep(1)
     
     
 

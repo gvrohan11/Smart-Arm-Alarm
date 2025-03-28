@@ -3,7 +3,7 @@ import RPi.GPIO as GPIO
 from time import sleep
 import schedule
 
-arm = Robot(left=(23, 24), right=(2, 3))
+arm = Robot(left=(2, 3), right=(9, 11))
 
 def wake_up():
     while True:
@@ -13,9 +13,13 @@ def wake_up():
                 print(x)
                 while x < 60:
                     arm.backward()
-                    sleep(1)
+                    sleep(.5)
+                    arm.stop()
+                    sleep(.25)
                     arm.forward()
-                    sleep(1)
+                    sleep(.5)
+                    arm.stop()
+                    sleep(.25)
                     x += 1
                     print(x)
                 arm.forward()
@@ -25,14 +29,14 @@ def wake_up():
             break
 
 # Test Code for arm:
-# wake_up()
+wake_up()
 
 # Actual Arm setting (Press Ctrl + C + C to De-Activate):
 
-schedule.every().day.at("08:00").do(wake_up)
+# schedule.every().day.at("08:00").do(wake_up)
 
-while True:
-    schedule.run_pending()
-    sleep(1)
+# while True:
+    # schedule.run_pending()
+    # sleep(1)
     
     
